@@ -1,0 +1,9 @@
+argv = ['/usr/bin/node-waf', 'configure']
+blddir = '/var/lib/cloud9/ext/nbone/build'
+commands = {'dist': 0, 'configure': True, 'distcheck': 0, 'install': 0, 'build': 0, 'clean': 0, 'distclean': 0, 'check': 0, 'uninstall': 0}
+cwd = '/var/lib/cloud9/ext/nbone'
+environ = {'TERM': 'xterm-256color', 'SHELL': '/bin/sh', 'SHLVL': '1', 'SSH_TTY': '/dev/pts/0', 'OLDPWD': '/var/lib/cloud9/ext', 'NODE_PATH': '/var/lib/node_modules/', 'EDITOR': '/bin/vi', 'PWD': '/var/lib/cloud9/ext/nbone', 'LOGNAME': 'root', 'USER': 'root', 'HOME': '/home/root', 'PATH': '/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin', 'PS1': '\\u@\\h:\\w\\$ ', '_': '/usr/bin/node-waf', 'SSH_CONNECTION': '10.0.20.157 61945 10.0.20.108 22'}
+files = []
+hash = 0
+options = {'compile_targets': None, 'force': False, 'verbose': 0, 'nocache': False, 'progress_bar': 0, 'destdir': '', 'keep': False, 'zones': '', 'blddir': '', 'prefix': '/usr/local/', 'jobs': 1, 'srcdir': '', 'check_cxx_compiler': 'g++ icpc sunc++'}
+srcdir = '/var/lib/cloud9/ext/nbone'

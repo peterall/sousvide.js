@@ -1,0 +1,159 @@
+/*
+ * Import nib
+ */
+@import 'nib'
+
+/*
+ * Grab a custom font from Google
+ */
+//@import url('http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,400,700')
+
+/*
+ * Nib provides a CSS reset
+ */
+global-reset()
+
+/*
+ * Store the main color and
+ * background color as variables
+ */
+main-color = #389BA6
+background-color = #F2F2F2
+text-color = #3C3F40
+accent-color-1 = #D9A13B
+accent-color-2 = #6CCED9
+accent-color-3 = #3C3F40
+font = 'Segoe UI','Helvetica Neue',sans-serif
+font-light = 'Segoe UI Light','HelveticaNeue-Light', sans-serif
+
+body
+  font-family font
+  background-color background-color
+  color text-color
+
+header
+  padding 8px 16px
+  color #fff
+  font-size 18px
+  font-family font
+
+  span
+    font-family font-light
+    padding 0px 8px
+    color darken(main-color, 50%)
+    text-shadow 0px 1px 0px lighten(main-color, 20%)
+
+
+  /*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color main-color
+  border-bottom 1px solid darken(main-color, 30%)
+  text-shadow 0px -1px 0px darken(main-color, 30%)
+
+.container
+  width 960px
+  margin 30px auto
+  overflow hidden
+
+.main-content
+  float left
+  width 640px
+
+  p
+    margin-bottom 20px
+
+.rickshaw_graph
+  height 300px
+  border 1px solid #ccc
+  border-radius 3px
+  box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
+
+.sidebar
+  float left
+  width 320px
+  margin -20px 0px
+
+  .widget
+
+    /*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+    border-radius 3px
+    border 1px solid #ccc
+    margin 20px 0px 20px 20px
+    background-color background-color
+    box-shadow inset 0px 0px 0px 3px rgba(#fff, 0.8), 0px 3px 0px -2px rgba(#000, 0.1)
+
+    h1
+      font-family font-light
+      font-size 24px
+      text-align center
+      margin 13px 10px 4px
+      padding-bottom 10px
+      border-bottom 1px dotted #ddd
+      border-radius 2px 2px 0px 0px
+      margin-bottom 10px
+      
+    p
+      font-size 13px
+      padding 0px 10px
+      margin-bottom 10px
+  
+    .realtime
+      text-align center
+      margin 14px 0px
+
+      #temp
+        margin-top 10px
+        margin-bottom 8px
+        font-size 96px
+        font-family font-light
+      #temp:after
+        content " °c"
+        color lighten(text-color, 50%)
+        font-size 16px      
+      #target
+        font-size 30px
+        margin 4px 0px
+        font-family font-light
+      #target:before
+        content "Target at "
+        font-size 16px
+        color lighten(text-color, 50%)
+      #target:after
+        content " °c"
+        color lighten(text-color, 50%)
+        font-size 16px
+      #dutycycle
+        font-size 30px
+        margin 4px 0px
+        font-family font-light
+      #dutycycle:before
+        content "Heater at "
+        font-size 16px
+        color lighten(text-color, 50%)
+      #dutycycle:after
+        content " %"
+        font-size 16px
+        color lighten(text-color, 50%)
+    
+    .ui-button
+      display block
+      width 80
+      margin 8px
+    key
+      display block
+p
+  line-height 1.8
+
+footer
+  width 960px
+  margin 30px auto
+  text-align center
+  border-top 1px dotted #ccc
+  padding-top 5px
+  font-size 13px

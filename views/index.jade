@@ -1,0 +1,37 @@
+extend layout
+block head
+  link(rel='stylesheet', href='/stylesheets/rickshaw.css')
+  link(rel='stylesheet', href='//code.jquery.com/ui/1.10.2/themes/smoothness/jquery-ui.css')
+  script(src='//code.jquery.com/jquery-1.9.1.js')
+  script(src='//code.jquery.com/ui/1.10.2/jquery-ui.js')
+  script(src='//d3js.org/d3.v3.min.js')
+  script(src='/js/rickshaw.min.js')
+  script(src='/index.js')
+block content
+  #chart
+block sidebar
+  .widget
+    h1 Status
+    .realtime
+      #temp
+      #target
+      #dutycycle
+  .widget
+    h1 Control
+    #start Start
+    #stop Stop
+    form#tunings(name="tunings", action="/tunings", method="post")
+      key Target
+        input(type="text", name="t")
+      key P
+        input(type="text", name="p")
+      key I
+        input(type="text", name="i")
+      key D
+        input(type="text", name="d")
+      key Min
+        input(type="text", name="min")
+      key Max
+        input(type="text", name="max")
+    #update Update
+    #clear Clear Graph

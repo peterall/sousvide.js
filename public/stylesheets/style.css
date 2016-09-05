@@ -1,0 +1,247 @@
+/*
+ * Import nib
+ */
+/*
+ * Grab a custom font from Google
+ */
+/*
+ * Nib provides a CSS reset
+ */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-family: inherit;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+body {
+  line-height: 1;
+  color: #000;
+  background: #fff;
+}
+ol,
+ul {
+  list-style: none;
+}
+table {
+  border-collapse: separate;
+  border-spacing: 0;
+  vertical-align: middle;
+}
+caption,
+th,
+td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+a img {
+  border: none;
+}
+/*
+ * Store the main color and
+ * background color as variables
+ */
+body {
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+  background-color: #f2f2f2;
+  color: #3c3f40;
+}
+header {
+  padding: 8px 16px;
+  color: #fff;
+  font-size: 18px;
+  font-family: 'Segoe UI', 'Helvetica Neue', sans-serif;
+/*
+   * Note the use of the `main-color`
+   * variable and the `darken` function
+   */
+  background-color: #389ba6;
+  border-bottom: 1px solid #276c74;
+  text-shadow: 0px -1px 0px #276c74;
+}
+header span {
+  font-family: 'Segoe UI Light', 'HelveticaNeue-Light', sans-serif;
+  padding: 0px 8px;
+  color: #1c4d53;
+  text-shadow: 0px 1px 0px #53b9c5;
+}
+.container {
+  width: 960px;
+  margin: 30px auto;
+  overflow: hidden;
+}
+.main-content {
+  float: left;
+  width: 640px;
+}
+.main-content p {
+  margin-bottom: 20px;
+}
+.rickshaw_graph {
+  height: 300px;
+  border: 1px solid #ccc;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+}
+.sidebar {
+  float: left;
+  width: 320px;
+  margin: -20px 0px;
+}
+.sidebar .widget {
+/*
+     * Note the lack of vendor
+     * prefixes here. Nib will
+     * add them for us
+     */
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  border: 1px solid #ccc;
+  margin: 20px 0px 20px 20px;
+  background-color: #f2f2f2;
+  -webkit-box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+  box-shadow: inset 0px 0px 0px 3px rgba(255,255,255,0.8), 0px 3px 0px -2px rgba(0,0,0,0.1);
+}
+.sidebar .widget h1 {
+  font-family: 'Segoe UI Light', 'HelveticaNeue-Light', sans-serif;
+  font-size: 24px;
+  text-align: center;
+  margin: 13px 10px 4px;
+  padding-bottom: 10px;
+  border-bottom: 1px dotted #ddd;
+  -webkit-border-radius: 2px 2px 0px 0px;
+  border-radius: 2px 2px 0px 0px;
+  margin-bottom: 10px;
+}
+.sidebar .widget p {
+  font-size: 13px;
+  padding: 0px 10px;
+  margin-bottom: 10px;
+}
+.sidebar .widget .realtime {
+  text-align: center;
+  margin: 14px 0px;
+}
+.sidebar .widget .realtime #temp {
+  margin-top: 10px;
+  margin-bottom: 8px;
+  font-size: 96px;
+  font-family: 'Segoe UI Light', 'HelveticaNeue-Light', sans-serif;
+}
+.sidebar .widget .realtime #temp:after {
+  content: " °c";
+  color: #9ba0a2;
+  font-size: 16px;
+}
+.sidebar .widget .realtime #target {
+  font-size: 30px;
+  margin: 4px 0px;
+  font-family: 'Segoe UI Light', 'HelveticaNeue-Light', sans-serif;
+}
+.sidebar .widget .realtime #target:before {
+  content: "Target at ";
+  font-size: 16px;
+  color: #9ba0a2;
+}
+.sidebar .widget .realtime #target:after {
+  content: " °c";
+  color: #9ba0a2;
+  font-size: 16px;
+}
+.sidebar .widget .realtime #dutycycle {
+  font-size: 30px;
+  margin: 4px 0px;
+  font-family: 'Segoe UI Light', 'HelveticaNeue-Light', sans-serif;
+}
+.sidebar .widget .realtime #dutycycle:before {
+  content: "Heater at ";
+  font-size: 16px;
+  color: #9ba0a2;
+}
+.sidebar .widget .realtime #dutycycle:after {
+  content: " %";
+  font-size: 16px;
+  color: #9ba0a2;
+}
+.sidebar .widget .ui-button {
+  display: block;
+  width: 80;
+  margin: 8px;
+}
+.sidebar .widget key {
+  display: block;
+}
+p {
+  line-height: 1.8;
+}
+footer {
+  width: 960px;
+  margin: 30px auto;
+  text-align: center;
+  border-top: 1px dotted #ccc;
+  padding-top: 5px;
+  font-size: 13px;
+}
