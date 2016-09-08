@@ -1,3 +1,4 @@
+// tuning parameters
 setInterval(() => {
     getTemperature(temp => {
         if(temp < 54.5) {
